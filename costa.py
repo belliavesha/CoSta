@@ -28,7 +28,7 @@ def update(val):
         tic, tis = cos(ti), sin(ti)
         tr = rlz*tre*tic-ilz*tre*tis 
         if tr>m: m = tr
-        ti = ilz*tre*tic+rlz*tre*tis
+        ti = (ilz*tre*tic+rlz*tre*tis)%(2*pi)
         xd[i]=tre*tic
         yd[i]=tre*tis 
     sc = exp(m)
